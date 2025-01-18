@@ -1,0 +1,18 @@
+creds:
+  - registry: dockerhub.arriaga.eu
+    user: "{{env \"HUB_USER\"}}"
+    pass: "{{env \"HUB_PASSWORD\"}}"
+  - registry: docker.io
+sync:
+  - source: docker.io/library/alpine:latest
+    target: dockerhub.arriaga.eu/alpine:latest
+    type: image
+  - source: docker.io/library/debian:latest
+    target: dockerhub.arriaga.eu/debian:latest
+    type: image
+  - source: docker.io/nginxdemos/nginx-hello:latest
+    target: dockerhub.arriaga.eu/nginx-hello:latest
+    type: image
+  - source: docker.io/library/ubuntu:22.04
+    target: dockerhub.arriaga.eu/ubuntu:22.04
+    type: image
