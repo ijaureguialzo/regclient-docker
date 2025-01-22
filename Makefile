@@ -1,5 +1,13 @@
 #!make
 
+ifeq (,$(wildcard ./.env))
+$(error No se encuentra el fichero .env)
+endif
+
+ifeq (,$(wildcard ./regsync.yml))
+$(error No se encuentra el fichero regsync.yml)
+endif
+
 help: _header
 	${info }
 	@echo Opciones:
