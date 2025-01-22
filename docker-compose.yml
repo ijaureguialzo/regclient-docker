@@ -1,8 +1,6 @@
 services:
   regsync:
     image: ghcr.io/regclient/regsync:latest
-    environment:
-      - HUB_USER=${HUB_USER}
-      - HUB_PASSWORD=${HUB_PASSWORD}
+    env_file: .env
     volumes:
       - ./regsync.yml:/home/appuser/regsync.yml
