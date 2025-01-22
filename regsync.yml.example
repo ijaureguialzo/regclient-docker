@@ -1,0 +1,14 @@
+creds:
+  - registry: '{{env "HUB_URL"}}'
+    user: '{{env "HUB_USER"}}'
+    pass: '{{env "HUB_PASSWORD"}}'
+  - registry: docker.io
+sync:
+  - source: docker.io/library/alpine
+    target: '{{env "HUB_URL"}}/alpine'
+    type: repository
+    tags:
+      allow:
+        - "latest"
+        - "3.21"
+        - "3.20"
