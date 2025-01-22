@@ -14,7 +14,7 @@ _header:
 	@echo -------
 
 check:
-	@docker compose run --rm regsync check -c /home/appuser/regsync.yml
+	@docker compose run --rm regsync check -c /home/appuser/regsync.yml -v debug
 
 sync:
 	@docker compose run --rm regsync once -c /home/appuser/regsync.yml
