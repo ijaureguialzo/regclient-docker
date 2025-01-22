@@ -12,3 +12,6 @@ sync:
         - "latest"
         - "3.21"
         - "3.20"
+  - source: docker.io/library/nginx:latest
+    target: '{{env "HUB_URL"}}/nginx:latest'
+    type: image
